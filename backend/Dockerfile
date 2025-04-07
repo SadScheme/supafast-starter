@@ -1,5 +1,5 @@
 # Ref: https://github.com/fastapi/full-stack-fastapi-template/blob/master/backend/Dockerfile
-FROM python:3.12-slim-bookworm
+FROM python:3.12
 
 # Print logs immediately
 # Ref: https://docs.python.org/3/using/cmdline.html#envvar-PYTHONUNBUFFERED

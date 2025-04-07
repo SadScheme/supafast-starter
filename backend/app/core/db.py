@@ -1,3 +1,4 @@
+import logging
 from collections.abc import Generator
 
 from sqlmodel import Session, create_engine, select
@@ -36,6 +37,13 @@ def init_db(session: Session) -> None:
                 "password": settings.FIRST_SUPERUSER_PASSWORD,
             }
         )
+        print(response)
+        logging.info(response)
+        logging.debug(response)
         assert response.user.email == settings.FIRST_SUPERUSER
         assert response.user.id is not None
         assert response.session.access_token is not None
+    else:
+        print("resource is already created")
+        logging.info("resource is already created")
+        logging.debug("resource is already created")

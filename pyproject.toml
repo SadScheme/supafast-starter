@@ -1,5 +1,5 @@
 [project]
-name = "fastapi_supabase_template"
+name = "supafast-starter"
 version = "0.4.1"
 description = ""
 authors = [{ name = "Atticus.J.Zeller", email = "hello@atticux.me" }]
@@ -8,7 +8,7 @@ readme = "README.md"
 ## VCS
 [tool.git-cliff.remote.github]
 owner = "atticuszeller"
-repo = "fastapi_supabase_template"
+repo = "supafast-starter"
 
 [tool.git-cliff.changelog]
 # template for the changelog header

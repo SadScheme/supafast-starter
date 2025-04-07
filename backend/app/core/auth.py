@@ -35,8 +35,9 @@ TokenDep = Annotated[str, Depends(reusable_oauth2)]
 
 
 async def get_current_user(token: TokenDep, super_client: SuperClient) -> UserIn:
-    """get current user from token and  validate same time"""
+    """get current user from token and validate same time"""
     user_rsp = await super_client.auth.get_user(jwt=token)
+    logging.info(user_rsp)
     if not user_rsp:
         logging.error("User not found")
         raise HTTPException(status_code=404, detail="User not found")
